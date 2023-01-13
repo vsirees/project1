@@ -1,6 +1,20 @@
 # importing library's
 import pandas as pd
 import numpy as np
+import glob
+
+#local path
+path = r'C:\Users\siriv\OneDrive\Desktop\project1\files'
+
+#importing files
+files = glob.glob(path + "/*.csv")
+
+#appending files
+df1 = []
+for filename in files:
+    df1.append(pd.read_csv(filename))
+
+df1 = pd.concat(df1, ignore_index=True)
 
 # file import
 df = pd.read_csv(r"C:\Users\siriv\OneDrive\Desktop\project1\S22_MOBILITY_DL_ITER5_v1.csv")
