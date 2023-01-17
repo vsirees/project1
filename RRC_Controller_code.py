@@ -96,6 +96,11 @@ df1['slot_number_diff']=df1['current_slot_number']-df1['previous_slot_number']
 df1["slot_number"]=np.where(df1["slot_number_diff"]<=9&(df1["Qualcomm 5G-NR MAC UL Physical Channel Schedule Report[Per Slot] PCell SCS"]=="15kHz"),1,0)
 df1["slot_number"]=np.where(df1["slot_number_diff"]<=19&(df1["Qualcomm 5G-NR MAC UL Physical Channel Schedule Report[Per Slot] PCell SCS"]=="30kHz"),1,0)
 df1["slot_number"]=np.where(df1["slot_number_diff"]<=79&(df1["Qualcomm 5G-NR MAC UL Physical Channel Schedule Report[Per Slot] PCell SCS"]=="120kHz"),1,0)
+				   
+
+
+
+
 
 
 
